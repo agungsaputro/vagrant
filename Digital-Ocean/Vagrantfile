@@ -1,0 +1,8 @@
+Vagrant.configure('2') do |config|
+    config.vm.box = "digital_ocean"
+    config.ssh.private_key_path = "/home/sammy/.ssh/id_rsa"
+    config.vm.provider :digital_ocean do |provider|
+    provider.token = "a2be731d4f22add01f139ae1f3eaa181535ae50d6ebb72718d46cae36a9ed7cb"
+    provider.image = "Ubuntu 16.04.2 x64"
+    provider.region = "New York 2"
+  end
